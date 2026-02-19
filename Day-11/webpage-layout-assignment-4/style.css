@@ -2,10 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-   
+    font-family: Arial, Helvetica, sans-serif;
 }
+/* ========================= */
 
-/* designing  the top navigation bar */
 .top{
     padding: 20px 60px;
     display: flex;
@@ -28,33 +28,36 @@
     text-decoration: none;
     color: #00bcd4;
     font-size: 14px;
+    transition: 0.3s;
 }
 
-/* Hero Section */
+.top ul a:hover{
+    color: #0097a7;
+}
+
+
+/* ========================= */
 .image{
     background-color: #2ec4b6;
     text-align: center;
     padding: 60px 20px;
     color: white;
 }
-
 .image img{
     width: 120px;
     height: 120px;
     border-radius: 50%;
     margin-bottom: 20px;
+    object-fit: cover;
 }
-
 .image h5{
     font-size: 28px;
-    margin-bottom: 10px;
+   margin-bottom: 10px;
 }
-
 .image p{
     font-size: 16px;
 }
-
-/* Cards Section */
+/* ========================= */
 .row{
     display: flex;
     padding: 50px 80px;
@@ -78,4 +81,55 @@
 .card img{
     width: 100%;
     margin: 15px 0;
+    border-radius: 5px;
+}
+
+
+/* ========================= */
+@media screen and (max-width: 1200px){
+
+    .row{
+        padding: 40px 50px;
+        gap: 30px;
+    }
+
+    .image h5{
+        font-size: 24px;
+    }
+
+    .image p{
+        font-size: 14px;
+    }
+}
+
+
+/* ========================= */
+
+@media screen and (max-width: 768px){
+    /* Navbar stacked */
+    .top{
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 20px;
+    }
+    .top ul{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .image{
+        padding: 40px 20px;
+    }
+    .image h5{
+        font-size: 22px;
+    }
+    .image p{
+        font-size: 14px;
+    }
+    /* Cards stacked */
+    .row{
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 30px;
+    }
 }
